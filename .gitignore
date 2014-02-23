@@ -1,3 +1,9 @@
 *.class
 .idea
 
+/javafx/JavaFXApplication1/nbproject/private/
+/javafx/JavaFXApplication1/build/
+/javafx/JavaFXApplication1/dist/
+private
+build
+dist
