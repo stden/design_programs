@@ -14,6 +14,9 @@ public class FXML extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        System.out.printf("JavaFX version: %s%n", com.sun.javafx.runtime.VersionInfo.getRuntimeVersion());
+        System.out.println("javafx.runtime.version: " + System.getProperties().get("javafx.runtime.version"));
+
         Parent root = FXMLLoader.load(getClass().getResource("Sample.fxml"));
 
         Scene scene = new Scene(root);
