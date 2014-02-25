@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package fxml;
 
 import javafx.application.Application;
@@ -11,7 +7,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 /**
- * JavaFX FXML example
+ * JavaFX FXML example.
+ * Need: jfxrt.jar from jre
  */
 public class FXML extends Application {
 
