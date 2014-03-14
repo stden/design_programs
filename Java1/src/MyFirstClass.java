@@ -1,4 +1,12 @@
+/**
+ * Основы Java: 14.03.2014
+ */
 public class MyFirstClass {
+    /**
+     * Основной метод программы, вызывается при её запуске
+     *
+     * @param args - массив параметров программы
+     */
     public static void main(String args[]) {
         int a = 2;
         int b = 3;
