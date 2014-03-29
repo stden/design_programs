@@ -22,7 +22,7 @@
         </constraints>
         <properties>
           <font name="Verdana" size="16" style="1"/>
-          <text value="Выполните вход с вашей роль:"/>
+          <text value="Вход в базу данных:"/>
         </properties>
       </component>
       <component id="b10fc" class="javax.swing.JTextField" binding="textField1" default-binding="true">
