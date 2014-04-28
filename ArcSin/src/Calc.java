@@ -1,0 +1,36 @@
+import static java.lang.Math.abs;
+import static java.lang.Math.pow;
+
+/**
+ * Вычисления
+ */
+public class Calc {
+
+    public static long fact(int num) {
+        return (num == 0) ? 1 : num * fact(num - 1);
+    }
+
+    /**
+     * Вычисление арксинуса через разложение в ряд
+     *
+     * @param x   аргумент
+     * @param kol количество членов ряда
+     * @return результат - значение арксинуса
+     */
+    public static double riad(double x, int kol) {
+        double fan = 0;
+        double arg1;
+        double arg2;
+        double arg3;
+
+        for (int n = 0; n <= kol; n++) {
+            arg1 = fact(2 * n);
+            arg2 = pow(4, n) * pow(fact(n), 2) * (2 * n + 1);
+            arg3 = pow(x, (2 * n + 1));
+            if (abs(arg2) > 1e-15) {
+                fan += (arg1 * arg3) / arg2;
+            }
+        }
+        return fan;
+    }
+}
