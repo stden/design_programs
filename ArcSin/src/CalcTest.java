@@ -13,15 +13,15 @@ public class CalcTest {
      */
     @Test
     public void factorial() {
-        assertEquals(1, Calc.fact(1));
-        assertEquals(2, Calc.fact(2));
-        assertEquals(2 * 3, Calc.fact(3));
-        assertEquals(2 * 3 * 4, Calc.fact(4));
+        assertEquals(1, Calc.fact(1), 0.0001);
+        assertEquals(2, Calc.fact(2), 0.0001);
+        assertEquals(2 * 3, Calc.fact(3), 0.0001);
+        assertEquals(2 * 3 * 4, Calc.fact(4), 0.0001);
     }
 
     @Test
     public void zeroTest() {
-        assertEquals(0.0, Calc.riad(0.0, 100), 1e-20);
+        assertEquals(0.0, Calc.riad(0.0, 50), 1e-20);
     }
 
     /**
@@ -30,7 +30,7 @@ public class CalcTest {
     @Test
     public void linearTest() {
         for (double x = -0.3; x < 0.3; x += 0.001) {
-            assertEquals(x, Calc.riad(x, 100), 0.01);
+            assertEquals(x, Calc.riad(x, 80), 0.01);
         }
     }
 
@@ -39,8 +39,8 @@ public class CalcTest {
      */
     @Test
     public void checkPointTest() {
-        assertEquals(PI / 2.0, Calc.riad(1, 2000), 0.01);
-        assertEquals(-PI / 2.0, Calc.riad(-1, 2000), 0.01);
+        assertEquals(PI / 2.0, Calc.riad(1), 0.1);
+        assertEquals(-PI / 2.0, Calc.riad(-1), 0.1);
     }
 
     /**
@@ -48,8 +48,8 @@ public class CalcTest {
      */
     @Test
     public void compareWithStandardImplementation() {
-        for (double x = 0; x < PI / 2; x += 0.01) {
-            assertEquals("x = " + x, Math.asin(x), Calc.riad(x, 1000), 0.01);
+        for (double x = 0; x < 1; x += 0.1) {
+            assertEquals("x = " + x, Math.asin(x), Calc.riad(x), 0.1);
         }
     }
 }
