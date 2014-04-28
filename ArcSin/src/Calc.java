@@ -5,8 +5,16 @@ import static java.lang.Math.pow;
  */
 public class Calc {
 
+<<<<<<< HEAD
     public static int fact(int num) {
         return (num == 0) ? 1 : num * fact(num - 1);
+=======
+    public static double fact(int num) {
+        double res = (num == 0) ? 1 : num * fact(num - 1);
+        if (Double.isNaN(res) || Double.isInfinite(res))
+            throw new ArithmeticException("Переполнение: " + num);
+        return res;
+>>>>>>> origin/master
     }
 
     /**
@@ -25,14 +33,20 @@ public class Calc {
         for (int n = 0; n <= kol; n++) {
             arg1 = fact(2 * n);
             arg2 = pow(4, n) * pow(fact(n), 2) * (2 * n + 1);
+<<<<<<< HEAD
             arg3 = pow(x, (2 * n + 1));
             if (Math.abs(arg2) > 1e-15) {
                 fan += (arg1 * arg3) / arg2;
             }
+=======
+            arg3 = pow(x, 2 * n + 1);
+            fan += (arg1 / arg2) * arg3;
+>>>>>>> origin/master
         }
         return fan;
     }
 
+<<<<<<< HEAD
 
     /**
      * Вычисление арксинуса через разложение в ряд
@@ -58,5 +72,9 @@ public class Calc {
             fan += tt;
         }
         return fan;
+=======
+    public static double riad(double x) {
+        return riad(x, 80);
+>>>>>>> origin/master
     }
 }
