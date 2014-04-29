@@ -159,12 +159,15 @@ public class SplayTreeMapTest {
         impl.add(5);
         assertEquals("5 / 4 / 6 /", impl.toString());
 
+        // Удаляем элемент 6
         impl.remove(6);
         assertEquals("5 / 4 /", impl.toString());
 
+        // Удаляем элемент 4
         impl.remove(4);
         assertEquals("5 /", impl.toString());
 
+        // Удаляем элемент 5
         impl.remove(5);
         assertEquals("", impl.toString());
     }
