@@ -54,9 +54,9 @@ public class CalcTest {
     }
 
     @Test
-    public void compareWithStandardImplementation2() {
+    public void compareWithStandardImplementationArcSin() {
         for (double x = 0; x < 1; x += 0.001) {
-            assertEquals("x = " + x, Math.asin(x), Calc.arcsin(x, 1000), 0.001);
+            assertEquals("x = " + x, Math.asin(x), Calc.arcsin(x), 0.00001);
         }
     }
 }
