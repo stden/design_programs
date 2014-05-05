@@ -33,4 +33,21 @@ public class DateTest {
         assertEquals(Calendar.MAY, cal.get(Calendar.MONTH));
         assertEquals(2013, cal.get(Calendar.YEAR));
     }
+
+    /**
+     * Перевод даты в формат БД Oracle и обратно
+     */
+    @Test
+    public void oracleDatabaseDateHelper() throws ParseException {
+        // Из даты в Oracle
+        Calendar c = Calendar.getInstance();
+        c.set(2014, Calendar.MAY, 9, 1, 2, 3);
+        Date date = c.getTime();
+        assertEquals("2014-05-09 01:02:03", OracleDateHelper.toStr(date));
+
+        // Из БД в дату
+        Date d = OracleDateHelper.parse("2014-05-09 01:02:03");
+        assertEquals("Fri May 09 01:02:03 MSK 2014", d.toString());
+    }
+
 }
