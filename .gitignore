@@ -1,6 +1,7 @@
 *.class
 .idea
 atlassian-ide-plugin.xml
+.DS_Store
 
 /javafx/JavaFXApplication1/nbproject/private/
 /javafx/JavaFXApplication1/build/
