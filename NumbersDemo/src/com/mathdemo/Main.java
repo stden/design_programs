@@ -19,7 +19,9 @@ public class Main {
     }
 
     // Проверяем что a+b = c в double
-    static void sumDouble(double a, double b, double c) {
+    static void sumDouble(double a,
+                          double b,
+                          double c) {
         if (a + b == c) {
             out.printf("YES ;)  %s + %s == %s - double", a, b, c);
         } else {
