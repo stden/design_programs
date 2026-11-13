@@ -1,0 +1,14 @@
+[tools]
+maven = "3.9.9"
+java = "21"
+
+[tasks.check]
+run = "git diff --check"
+
+[tasks."IntegrationTesting:build"]
+run = "mvn verify"
+dir = "IntegrationTesting"
+
+[tasks."IntegrationTesting:test"]
+run = "mvn test"
+dir = "IntegrationTesting"
